@@ -8,15 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
   </head>
   <body id="body">
     <!-- NavBar -->
-    <div class="fixed top-0 left-0 w-full block transition-all duration-500 z-20" id="navbar">
-      <div class="bg-white w-full container">
-        <div class="w-full pb-5 pt-5 flex items-center justify-between px-8">
+    <div class="fixed top-0 left-0 w-full block transition-all duration-500 z-20 bg-white" id="navbar">
+      <div class="w-full container mx-auto">
+        <div class="w-full pb-5 pt-5 flex items-center justify-between px-8 sm:px-0">
           <h1 class="text-center text-primary text-4xl font-medium">AL<span class="font-bold">DEV</span>O</h1>
-          <div class="border-2 border-primary w-fit" id="navbut">
+          <div class="lg:flex lg:flex-wrap text-primary text-xl font-medium lg:gap-8 hidden">
+            <a id="homebutlg">
+              <h5 class="w-full cursor-pointer">Home</h5>
+            </a>
+            <a id="aboutbutlg">
+              <h5 class="w-full cursor-pointer">About Me</h5>
+            </a>
+            <a id="projectsbutlg">
+              <h5 class="w-full cursor-pointer">My Projects</h5>
+            </a>
+            <a id="contactbutlg">
+              <h5 class="w-full cursor-pointer">Contact Us</h5>
+            </a>
+          </div>
+          <div class="border-2 border-primary w-fit lg:hidden" id="navbut">
             <div class="h-7 w-8 flex items-center justify-center">
               <div>
                 <div class="bg-primary w-6 h-[.15rem] mb-1 rounded-full"></div>
@@ -28,8 +42,8 @@
         </div>
       </div>
     </div>
-    <div class="fixed top-0 z-10 -translate-x-full transition-all duration-300 ease-in-out" id="navpage">
-      <div class="w-screen h-screen bg-white flex flex-wrap pt-32">
+    <div class="fixed top-0 z-10 -translate-x-full transition-all duration-300 ease-in-out lg:hidden" id="navpage">
+      <div class="w-screen h-screen bg-white flex flex-wrap pt-32 container mx-auto">
         <div class="text-primary text-2xl font-semibold mx-8">
           <a id="homebut">
             <h5 class="w-full mb-10">Home</h5>
@@ -48,32 +62,42 @@
     </div>
     <!-- NavBar -->
     <!-- Hero -->
-    <div class="mt-36 flex items-center mb-10">
-      <div class="flex flex-wrap">
-        <div class="container mx-auto">
-          <div class="mx-8">
+    <div class="mt-36 flex items-center mb-10 justify-center">
+      <div class="flex flex-wrap w-full">
+        <div class="container mx-auto mb-10">
+          <div class="mx-8 sm:mx-0">
             <h1 class="font-bold text-[2.75rem] leading-snug mb-2">Full Stack<br />Web Developer.</h1>
             <p class="font-light text-lg mb-5">
               Hi, my name is Deffaldo, a freelance graphic designer who likes web development. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a id="aboutbut2">
+            <div class="cursor-pointer">
               <div class="border-primary border-2 w-fit">
-                <div class="flex items-center py-3 px-8">
-                  <h4 class="mr-4 font-semibold">About</h4>
-                  <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="scale-75">
-                    <path d="M1 8.5H20.5M20.5 8.5L13.5 1.5M20.5 8.5L13.5 15.5" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
+                <a id="aboutbut2">
+                  <div class="flex items-center py-3 px-8">
+                    <h4 class="mr-4 font-semibold">About</h4>
+                    <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="scale-75">
+                      <path d="M1 8.5H20.5M20.5 8.5L13.5 1.5M20.5 8.5L13.5 15.5" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
-        <div class="relative w-full overflow-hidden mt-10">
-          <div class="relative overflow-hidden h-20 mb-3 opacity-5">
-            <h1 class="text-7xl whitespace-nowrap anim font-bold absolute">Web Development Web Development Web Development Web Development Web Development Web Development Web Development Web Development</h1>
+        <div class="flex relative w-full overflow-hidden h-20 mb-3">
+          <div class="flex absolute top-0 left-0 items-center justify-start w-full whitespace-nowrap transition-all duration-1000 ease-in-out">
+            <div class="flex gap-4 anim">
+              <h1 class="m-0 transition-all duration-[2s] ease-in-out text-7xl font-bold opacity-5"><span>Web Developer</span> <span>Web Developer</span> <span>Web Developer</span></h1>
+              <h1 class="m-0 transition-all duration-[2s] ease-in-out text-7xl font-bold opacity-5"><span>Web Developer</span> <span>Web Developer</span> <span>Web Developer</span></h1>
+            </div>
           </div>
-          <div class="relative overflow-hidden h-20 opacity-5">
-            <h1 class="text-7xl whitespace-nowrap anim2 font-bold absolute">Web Development Web Development Web Development Web Development Web Development Web Development Web Development Web Development</h1>
+        </div>
+        <div class="flex relative w-full overflow-hidden h-20">
+          <div class="flex absolute flex-row-reverse top-0 left-0 items-center justify-start w-full whitespace-nowrap transition-all duration-1000 ease-in-out">
+            <div class="flex gap-4 anim2">
+              <h1 class="m-0 transition-all duration-[2s] ease-in-out text-7xl font-bold opacity-5"><span>Web Developer</span> <span>Web Developer</span> <span>Web Developer</span></h1>
+              <h1 class="m-0 transition-all duration-[2s] ease-in-out text-7xl font-bold opacity-5"><span>Web Developer</span> <span>Web Developer</span> <span>Web Developer</span></h1>
+            </div>
           </div>
         </div>
       </div>
@@ -81,8 +105,8 @@
     <!-- Hero -->
     <!-- about -->
     <div class="mb-10" id="about">
-      <div class="container">
-        <div class="mx-8">
+      <div class="container mx-auto mb-10">
+        <div class="mx-8 sm:mx-0">
           <h1 class="font-bold text-[2.75rem] leading-snug mb-10 text-center">About Me</h1>
           <h2 class="font-bold text-2xl mb-2">Know Me</h2>
           <p class="font-light text-lg mb-5">
@@ -90,7 +114,7 @@
           </p>
           <p class="font-light text-lg mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <h2 class="font-bold text-2xl mb-2">Interest</h2>
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-2 gap-4 sm:flex sm:gap-4">
             <div class="flex items-center">
               <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_48_188)">
@@ -130,21 +154,29 @@
           </div>
         </div>
       </div>
-      <div class="relative w-full overflow-hidden mt-10">
-        <div class="relative overflow-hidden h-20 mb-3 opacity-5">
-          <h1 class="text-7xl whitespace-nowrap anim3 font-bold absolute">About Me About Me About Me About Me About Me About Me About Me About Me About Me About Me About Me About Me About Me About Me</h1>
+      <div class="flex relative w-full overflow-hidden h-20 mb-3">
+        <div class="flex absolute top-0 left-0 items-center justify-start w-full whitespace-nowrap transition-all duration-1000 ease-in-out">
+          <div class="flex gap-4 anim3">
+            <h1 class="m-0 transition-all duration-[2s] ease-in-out text-7xl font-bold opacity-5"><span>About Me</span> <span>About Me</span> <span>About Me</span> <span>About Me</span> <span>About Me</span></h1>
+            <h1 class="m-0 transition-all duration-[2s] ease-in-out text-7xl font-bold opacity-5"><span>About Me</span> <span>About Me</span> <span>About Me</span> <span>About Me</span> <span>About Me</span></h1>
+          </div>
         </div>
-        <div class="relative overflow-hidden h-20 opacity-5">
-          <h1 class="text-7xl whitespace-nowrap anim4 font-bold absolute">About Me About Me About Me About Me About Me About Me About Me About Me About Me About Me About Me About Me About Me About Me</h1>
+      </div>
+      <div class="flex relative w-full overflow-hidden h-20">
+        <div class="flex absolute flex-row-reverse top-0 left-0 items-center justify-start w-full whitespace-nowrap transition-all duration-1000 ease-in-out">
+          <div class="flex gap-4 anim4">
+            <h1 class="m-0 transition-all duration-[2s] ease-in-out text-7xl font-bold opacity-5"><span>About Me</span> <span>About Me</span> <span>About Me</span> <span>About Me</span> <span>About Me</span></h1>
+            <h1 class="m-0 transition-all duration-[2s] ease-in-out text-7xl font-bold opacity-5"><span>About Me</span> <span>About Me</span> <span>About Me</span> <span>About Me</span> <span>About Me</span></h1>
+          </div>
         </div>
       </div>
     </div>
     <!-- about -->
     <!-- Portfolio -->
-    <div class="container mb-20" id="projects">
+    <div class="container mb-20 mx-auto" id="projects">
       <h1 class="font-bold text-[2.75rem] leading-snug mb-10 text-center">My Projects</h1>
       <div class="flex flex-wrap justify-center mb-10 gap-10">
-        <div class="w-80 h-[26rem] relative bg-cover hover:drop-shadow-lg transition duration-200" style="background-image: url('/public/img/port1.png')">
+        <div class="w-80 h-[26rem] relative bg-cover hover:drop-shadow-lg transition duration-200" style="background-image: url('public/img/port1.png')">
           <div class="bg-white w-56 h-20 absolute bottom-0 left-0 flex flex-wrap items-center">
             <div class="ml-6">
               <h4 class="text-lg font-semibold text-primary">Portfolio Website</h4>
@@ -152,7 +184,7 @@
             </div>
           </div>
         </div>
-        <div class="w-80 h-[26rem] relative bg-cover hover:drop-shadow-lg transition duration-200" style="background-image: url('/public/img/port2.png')">
+        <div class="w-80 h-[26rem] relative bg-cover hover:drop-shadow-lg transition duration-200" style="background-image: url('public/img/port2.png')">
           <div class="bg-white w-56 h-20 absolute bottom-0 left-0 flex flex-wrap items-center">
             <div class="ml-6">
               <h4 class="text-lg font-semibold text-primary">Portfolio Website</h4>
@@ -160,7 +192,7 @@
             </div>
           </div>
         </div>
-        <div class="w-80 h-[26rem] relative bg-cover hover:drop-shadow-lg transition duration-200" style="background-image: url('/public/img/port3.png')">
+        <div class="w-80 h-[26rem] relative bg-cover hover:drop-shadow-lg transition duration-200" style="background-image: url('public/img/port3.png')">
           <div class="bg-white w-56 h-20 absolute bottom-0 left-0 flex flex-wrap items-center">
             <div class="ml-6">
               <h4 class="text-lg font-semibold text-primary">Portfolio Website</h4>
@@ -172,7 +204,7 @@
     </div>
     <!-- Portfolio -->
     <!-- Contact -->
-    <div class="container mb-10" id="contact">
+    <div class="container mb-10 mx-auto" id="contact">
       <h1 class="font-bold text-[2.75rem] leading-snug mb-10 text-center">Contact Us</h1>
       <div class="flex flex-wrap justify-center">
         <div class="border-b-2 border-primary w-4/5 mb-7">
@@ -196,8 +228,8 @@
     </div>
     <!-- Contact -->
     <!-- Footer -->
-    <div class="container bg-primary">
-      <div class="py-10">
+    <div class="bg-primary">
+      <div class="py-10 container mx-auto">
         <h1 class="text-center text-white text-4xl mb-3 font-medium">AL<span class="font-bold">DEV</span>O</h1>
         <h6 class="text-center text-white font-light mb-4">©2022 Aldevo. All rights reserved.</h6>
         <div class="flex gap-5 justify-center">
@@ -226,7 +258,7 @@
     </div>
     <!-- Footer -->
 
-    <script src="js/app.js"></script>
+    <script src="public/js/app.js"></script>
   </body>
 </html>
 
