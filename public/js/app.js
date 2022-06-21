@@ -1,14 +1,22 @@
 //navigation scroll
 
 let prevScrollpos = window.pageYOffset;
+const navbar = document.getElementById("navbar");
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos >= currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
+    navbar.style.top = "0";
   } else {
-    document.getElementById("navbar").style.top = "-12%";
+    navbar.style.top = "-12%";
   }
   prevScrollpos = currentScrollPos;
+  if (window.pageYOffset === 0) {
+    navbar.classList.add("bg-transparent");
+    navbar.classList.remove("bg-white");
+  } else {
+    navbar.classList.remove("bg-transparent");
+    navbar.classList.add("bg-white");
+  }
 };
 
 //navigation page
